@@ -23,7 +23,10 @@ public class exem {
      }
      System.out.println(i);
      }
-    
+    int[] arr = new int []{1,2,3,4,5,6,78,98,100};
+       for(int numbers : arr){
+        System.out.println(numbers);
+       }
     }
    
     }
