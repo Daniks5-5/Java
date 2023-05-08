@@ -4,13 +4,16 @@ public class ClassandObject {
         name1.family="Ivanov";
         name1.name="Ivan";
         name1.age=15;
-        System.out.println("Моя фамилия"+" "+name1.family+" "+",меня зовут"+" "+name1.name+" "+"и мне"+" "+name1.age);
+        name1.speaker();
         Person name2 = new Person();
         name2.family="Sidorov";
         name2.name="Nick";
         name2.age=17;
-        System.out.println("Моя фамилия"+" "+name2.family+" "+",меня зовут"+" "+name2.name+" "+"и мне"+" "+name2.age);
-
+        name2.fam();
+        int age1 = name1.pension();
+        int age2 = name2.pension();
+        System.out.println("Первому человеку до пенсии "+age1);
+        System.out.println("Второму человеку до пенсии "+ age2);
     }
     
 }
@@ -18,4 +21,21 @@ class Person{
     String family;
     String name;
     int age;
+    void speaker(){
+        for(int i=0;i<3;i++){
+        System.out.println("Моя фамилия"+" "+family+", меня зовут"+" "+name+" "+"и мне"+" "+age);
+        }
+    
+    }
+    void fam(){
+        for(int i=0;i<3;i++){
+            System.out.println("Моё имя "+name+", а фамилия "+family+" , кстати мне "+age);
+        }
+    }
+    int pension(){
+        int years=65-age;
+        return years;
+    }
 }
+
+    
